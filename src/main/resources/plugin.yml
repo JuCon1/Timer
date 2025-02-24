@@ -1,0 +1,10 @@
+main: ch.thejucon.timer.Main
+
+name: Timer
+description: Timer Plugin
+
+author: Thejucon
+website: Coming Soon!
+
+version: 1.0 SNAPSHOT
+api-version: 1.21

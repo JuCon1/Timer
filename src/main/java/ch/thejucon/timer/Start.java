@@ -2,7 +2,7 @@ package ch.thejucon.timer;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin {
+public class Start extends JavaPlugin {
 
 
     // Plugin load engine

@@ -1,10 +1,38 @@
 name: Timer
 main: ch.thejucon.timer.Start
 version: 1.0
+author: Thejucon
 api-version: 1.20
-description: A Minecraft timer with start, pause and stop
+description: A Minecraft plugin that provides a countdown timer with optional teleportation.
+
 commands:
   timer:
-    description: Kontrolliert den Timer
-    usage: /timer <start|stop|pause|settime>
-    aliases: [time]
+    description: Controls the timer and teleportation feature.
+    usage: |
+      /timer <start|stop|pause|continue|settime|reload|player <exclude <Name>|add <Name>>|tp <enable|disable|set|reset>|help|color <color>>
+
+permissions:
+  timer.time:
+    description: Allows the player to start, stop, pause, and continue the timer.
+    default: op
+  timer.color:
+    description: Allows the player to change the timer color.
+    default: op
+  timer.tp:
+    description: Allows the player to set, enable, and disable teleportation.
+    default: op
+  timer.settime:
+    description: Allows the player to set the timer time.
+    default: op
+  timer.player:
+    description: Allows the player to use /timer player commands.
+    default: op
+  timer.*:
+    description: Grants all permissions for the Timer plugin.
+    default: op
+    children:
+      timer.time: true
+      timer.color: true
+      timer.tp: true
+      timer.settime: true
+      timer.player: true
